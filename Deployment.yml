@@ -14,7 +14,7 @@ spec:
       containers:
         - name: hello-app
           image: us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello
-          imagePullPolicy: "Always"
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 
