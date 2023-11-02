@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: hello-app
-          image: us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello:latest
+          image: us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello:${BUILD_NUMBER}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
