@@ -25,5 +25,6 @@ metadata:
 spec:
   selector:
     app: hello-app
+  type: LoadBalancer
   ports:
     - port: 80
