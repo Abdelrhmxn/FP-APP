@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Image Build'){
             steps{
-                sh "docker build -t us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello:v${env.BUILD_NUMBER} ."
+                sh "docker build -t us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello ."
             }
         }
         stage('Image Push'){
             steps{
-                sh "docker push us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello:v${env.BUILD_NUMBER}"
+                sh "docker push us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello"
             }
         }
         stage('Deploy'){
