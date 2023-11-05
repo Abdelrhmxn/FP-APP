@@ -6,7 +6,7 @@ pipeline {
             steps{
                 sh '''
                 gcloud auth configure-docker us-central1-docker.pkg.dev
-                gcloud container clusters get-credentials abdelrhmxn-gke-cluster --region us-central1 --project abdelrhmxn-gcp-project
+                gcloud container clusters get-credentials abdelrhmxn-gke-cluster --zone us-central1-a --project abdelrhmxn-gcp-project
                 '''
             }
         }
