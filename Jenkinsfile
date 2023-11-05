@@ -2,6 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('Authentication'){
+            steps{
+                sh '''
+                gcloud auth configure-docker us-central1-docker.pkg.dev
+                gcloud container clusters get-credentials abdelrhmxn-gke-cluster --region us-central1 --project abdelrhmxn-gcp-project
+                '''
+            }
+        }
         stage('Image Build'){
             steps{
                 sh "docker build -t us-central1-docker.pkg.dev/abdelrhmxn-gcp-project/my-repository/hello:${BUILD_NUMBER} ."
